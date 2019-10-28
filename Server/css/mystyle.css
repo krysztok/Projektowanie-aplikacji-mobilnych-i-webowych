@@ -1,0 +1,77 @@
+
+body {
+width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: georgia;
+  font-size: 20px;
+}
+
+#firstNameError {
+display: none;
+font-size: 10px;
+color: red
+}
+
+#lastNameError {
+display: none;
+font-size: 10px;
+color: red
+}
+
+#loginError {
+display: none;
+font-size: 10px;
+color: red
+}
+
+#passwordError {
+display: none;
+font-size: 10px;
+color: red
+}
+
+#emailError {
+display: none;
+font-size: 10px;
+color: red
+}
+
+#birthdayError {
+display: none;
+ font-size: 10px;
+ color: red
+}
+
+ #genderError {
+ display: none;
+ font-size: 10px;
+ color: red
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+
+padding: 15px;
+}
+
+#border {
+
+outline: 5px groove rgba(16,65,97,0.76);
+outline-offset: 14px;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="css/mystyle.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8">
+        <title>Registration</title>
+    </head>
+    <body>
+
+    <form action="mailto:adres e-mail?subject=temat" method="post" enctype="text/plain" onsubmit="if (check(this)) return true; return false">
+
+    <div id="border">
+        <h1>Registration</h1>
+        <hr>
+        <table>
+            <tr>
+                <td><p>Firstname:</p></td>
+                <td><input type="text" name="firstname" id ="firstName" oninput="checkFirstname(this)"></td>
+                <td><p id="firstNameError">First name should be longer!</p></td>
+            </tr>
+            <tr>
+                <td><p>Lastname:</p></td>
+                <td><input type="text" name="lastname" id ="lastName" oninput="checkLastname(this)"></td>
+                <td><p id="lastNameError">Last name should be longer!</p></td>
+            </tr>
+            <tr>
+                <td><p>Login:</p></td>
+                <td><input type="text" name="login" id ="login" oninput="checkLogin(this)"></td>
+                <td><p id="loginError">Login should be at least 7 characters long!</p></td>
+            </tr>
+            <tr>
+                <td><p>Password:</p></td>
+                <td><input type="password" name="password" id ="password" oninput="checkPassword(this)"></td>
+                <td><p id="passwordError">Password should be at least 7 characters long!</p></td>
+            </tr>
+            <tr>
+                <td><p>Email:</p></td>
+                <td><input type="text" name="email" id ="email" oninput="checkEmail(this)"><br></td>
+                <td><p id="emailError">Email should be longer!</p></td>
+            </tr>
+            <tr>
+                <td><p>Birthday:</p></td>
+                <td><input type="date" id ="birthday"></td>
+                <td><p id="birthdayError">Chose your birhday date!</p></td>
+            </tr>
+            <tr>
+                <td><p>Gender:</p></td>
+                <td><input list="genderl" id="gender">
+                    <datalist id="genderl">
+                        <option value="Male">
+                        <option value="Female">
+                    </datalist></td>
+                <td><p id="genderError">Chose your gender!</p></td>
+            </tr>
+        </table>
+
+        <script src="js/script.js"></script>
+        <input type="submit" value="Submit" >
+
+    </div>
+
+    </form>
+
+    </body>
+</html>
