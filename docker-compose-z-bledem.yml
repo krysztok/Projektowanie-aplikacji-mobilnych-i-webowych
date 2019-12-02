@@ -1,0 +1,8 @@
+    redis:
+        image: sameersbn/redis:latest
+        ports:
+            - 9001:6379
+    server:
+        build: "./Server" 
+        ports: 
+            - "8889:8889"

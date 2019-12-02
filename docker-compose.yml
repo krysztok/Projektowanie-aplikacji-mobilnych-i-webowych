@@ -1,0 +1,4 @@
+redis:
+    image: sameersbn/redis:latest
+    ports:
+        - 9001:6379

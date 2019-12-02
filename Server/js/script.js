@@ -39,11 +39,25 @@ function check(register)
 	}
 
 	if(checkUsernameAvailabe(element.value) == false){
-            status = false;
+	        allert("exists");
+            return false;
     }
 
     if(status == true){
-    addUser(register);
+        var login = document.getElementById("login").value;
+        var firstname = document.getElementById("firstName").value;
+        var lastname = document.getElementById("lastName").value;
+        var password = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
+        var birthday = document.getElementById("birthday").value;
+        var gender = document.getElementById("gender").value;
+
+        if(checkUsernameAvailabe(login) == false){
+            allert("exists");
+            return false;
+        }
+
+        addUser(firstname, lastname, login, password, email, birthday, gender);
     }
 
 	return status;
@@ -109,18 +123,18 @@ function checkEmail(element)
        return true;
    }
 
-function addUser(register){
+function addUser(firstname, lastname, login, password, email, birthday, gender){
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://localhost:8889/', false);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         var data = new FormData();
-        data.append('firstname', 'document.getElementById(firstname)');
-        data.append('lastname', 'document.getElementById(lastname)');
-        data.append('login', 'document.getElementById(login)');
-        data.append('password', 'document.getElementById(password)');
-        data.append('email', 'document.getElementById(email)');
-        data.append('birthday', 'document.getElementById(birthday)');
-        data.append('gender', 'document.getElementById(gender)');
+        data.append('firstname', firstname);
+        data.append('lastname', lastname);
+        data.append('login', login);
+        data.append('password', password);
+        data.append('email', email);
+        data.append('birthday', birthday);
+        data.append('gender', gender);
         xhr.send(data);
 
    }
@@ -136,6 +150,8 @@ function addUser(register){
     result = xmlhttp.responseText;
     }
 
+
+
     var arrayOfLines = result.split("\n");
 
     var i=0;
@@ -143,9 +159,12 @@ function addUser(register){
         if(arrayOfLines[i].trim() == name.trim()){
             return false;
         }
-
     }
 
   return available;
-
   }
+
+function showLoginPage(){
+        location.href = 'http://localhost:8889/html/login.html';
+}
+

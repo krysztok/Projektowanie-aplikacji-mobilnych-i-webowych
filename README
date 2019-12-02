@@ -1,7 +1,3 @@
-W katalogu Server/html znajduje się formularz rejestracyjny
-W katalogu Server/css znajduje się plik css
-W katalogu Server/js znajduje się kod javascript
+docker compose uruchamia tylko bazę danych w redisie
 
-Próbowałem sam napisać serwer w javie. Obsługuje rządania get, ale nie udało mi się obsłużyć rządań post.
-
-Sprawdzenie, czy użytkownik istnieje nie odbywa się asynchronicznie.
+pliki pdf po przesłaniu na serwer są uszkodzone

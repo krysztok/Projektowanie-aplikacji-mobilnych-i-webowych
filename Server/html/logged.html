@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+
+<div id="border">
+    <h1>Logged</h1>
+
+
+    <button type="submit" onclick="showLogoutPage()">Log out</button>
+
+    <hr>
+
+    <form action="/sendPDFa" method="post" enctype="multipart/form-data">
+        <input type="file" name="nazwa" accept="application/pdf">
+        <input id="submitPDF" type="submit">
+    </form>
+
+    <hr>
+
+    <script src="/js/scriptLogin.js"></script>
+
+</div>
+
+
+</body>
+</html>
