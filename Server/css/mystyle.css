@@ -11,6 +11,12 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+
 p {
   font-family: georgia;
   font-size: 20px;
@@ -63,6 +69,13 @@ table{
     margin-right: auto;
 
 padding: 15px;
+}
+
+#tab{
+    margin-left: auto;
+    margin-right: auto;
+
+padding: 0px;
 }
 
 #border {

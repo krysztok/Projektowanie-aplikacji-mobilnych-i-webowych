@@ -28,5 +28,16 @@ function showLoginPage(){
 }
 
 function showLogoutPage(){
-         location.href = 'http://localhost:8889/html/notlogged.html';
+         location.href = 'http://localhost:8889/logout';
  }
+
+function addPoz(){
+        var name = document.getElementById("newPoz").value;
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('POST', 'http://localhost:8889/newPoz', false);
+                            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            var data = new FormData();
+                            data.append('newPoz', name);
+                            xhr.send(data);
+                            showLoggedPage();
+}
